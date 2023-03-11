@@ -1,0 +1,1 @@
+select * from human where gender = 'Male';
