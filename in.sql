@@ -1,0 +1,1 @@
+select * from human where country in ('China', 'Brazil', 'France') Order By country;
