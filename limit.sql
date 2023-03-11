@@ -1,0 +1,1 @@
+select * from human offset 12 limit 10;
