@@ -1,0 +1,1 @@
+select * from human Order By date_of_birth DESC, id ASC;
