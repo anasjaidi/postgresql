@@ -5,4 +5,8 @@
     <bean id="testNameBean" name="nameBean" class="com.spring.doc.classes.nameBean">
 
     </bean>
+
+    <alias name="testNameBean" alias="testAliasName"/>
+
+
 </beans>

@@ -15,8 +15,8 @@ public class DocApplication {
     public static void main(String[] args) {
         ApplicationContext appCtx = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        nameBean bean = (nameBean) appCtx.getBean("nameBean");
+        nameBean bean = (nameBean) appCtx.getBean("testAliasName");
         bean.foo();
-        System.out.println("hi");
+        System.out.println(bean.getClass());
     }
 }
