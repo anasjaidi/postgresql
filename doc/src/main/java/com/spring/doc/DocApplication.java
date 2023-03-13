@@ -1,5 +1,6 @@
 package com.spring.doc;
 
+import com.spring.doc.classes.factoryMethod;
 import com.spring.doc.classes.nameBean;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,6 +17,11 @@ public class DocApplication {
         ApplicationContext appCtx = new ClassPathXmlApplicationContext("applicationContext.xml");
 
         nameBean bean = (nameBean) appCtx.getBean("testAliasName");
+
+        factoryMethod b = (factoryMethod) appCtx.getBean("initBean");
+
+        System.out.println(b.getMail());
+        System.out.println(b.getPass());
         bean.foo();
         System.out.println(bean.getClass());
     }

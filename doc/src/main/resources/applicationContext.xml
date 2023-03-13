@@ -7,6 +7,8 @@
     </bean>
 
     <alias name="testNameBean" alias="testAliasName"/>
+    <bean id="initBean" class="com.spring.doc.classes.factoryMethod" factory-method="init">
 
+    </bean>
 
 </beans>
