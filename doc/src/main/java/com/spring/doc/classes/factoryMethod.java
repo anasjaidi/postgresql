@@ -19,7 +19,7 @@ public class factoryMethod {
 
     private String mail;
     private String pass;
-    static factoryMethod init() {
+    public static factoryMethod init() {
         factoryMethod tmp = new factoryMethod();
         tmp.mail = "anas.jaidi@icloud.com";
         tmp.pass = "pass";

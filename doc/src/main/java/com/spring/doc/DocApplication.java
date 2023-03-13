@@ -22,6 +22,7 @@ public class DocApplication {
 
         System.out.println(b.getMail());
         System.out.println(b.getPass());
+        System.out.println();
         bean.foo();
         System.out.println(bean.getClass());
     }
