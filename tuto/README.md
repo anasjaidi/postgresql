@@ -548,3 +548,19 @@ WHERE
 
 ![](images/PostgreSQL-WHERE-with-AND-operator.png)
 
+#### 3) Using the WHERE clause with the OR operator example
+
+This example finds the customers whose last name is `Rodriguez` or first name is `Adam` by using the `OR` operator:
+
+```postgresql
+SELECT
+	first_name,
+	last_name
+FROM
+	customer
+WHERE
+	last_name = 'Rodriguez' OR 
+	first_name = 'Adam';
+```
+![](images/PostgreSQL-WHERE-with-OR-operator.png)
+
