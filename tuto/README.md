@@ -463,13 +463,69 @@ ORDER BY
 
 ![](images/PostgreSQL-Distinct-select-distinct-on.png)
 
+# Filtering Data
+
+## WHERE
+
+The syntax of the `PostgreSQL` `WHERE` clause is as follows:
+
+
+```postgresql
+SELECT select_list
+FROM table_name
+WHERE condition
+ORDER BY sort_expression
+```
+
+
+The `WHERE` clause appears right after the `FROM` clause of the `SELECT` statement.  The `WHERE` clause uses the condition to filter the rows returned from the `SELECT` clause.
+
+The condition must evaluate to `true`, `false`, or `unknown`. It can be a `boolean expression` or a combination of boolean expressions using the `AND` and `OR` operators.
+
+The query returns only rows that satisfy the `condition` in the `WHERE` clause. In other words, only rows that cause the `condition` evaluates to true will be included in the result set.
+
+
+`PostgreSQL` evaluates the `WHERE` clause after the `FROM` clause and before the `SELECT` and `ORDER BY` clause:
+
+![](images/PostgreSQL-WHERE.png)
+
+If you use column `aliases` in the `SELECT` clause, you cannot use them in the `WHERE` clause.
+
+Besides the `SELECT` statement, you can use the WHERE clause in the `UPDATE` and `DELETE` statement to specify rows to be updated or deleted.
+
+To form the condition in the `WHERE` clause, you use comparison and logical operators:
 
 
 
+| Operator | Description |
+|----------|-------------|
+| =        | Equal       |
+| >        | Greater than|
+| <        | Less than   |
+| >=       | Greater than or equal |
+| <=       | Less than or equal |
+| <> or != | Not equal   |
+| AND      | Logical operator AND |
+| OR       | Logical operator OR  |
+| IN       | Return true if a value matches any value in a list |
+| BETWEEN  | Return true if a value is between a range of values |
+| LIKE     | Return true if a value matches a pattern |
+| IS NULL  | Return true if a value is NULL |
+| NOT      | Negate the result of other operators |
 
+### WHERE clause examples
 
+#### 1)  Using WHERE clause with the equal (=) operator example
 
+The following statement uses the `WHERE` clause customers whose first names are `Jamie`:
 
-
-
+```postgresql
+SELECT
+	last_name,
+	first_name
+FROM
+	customer
+WHERE
+	first_name = 'Jamie';
+```
 
