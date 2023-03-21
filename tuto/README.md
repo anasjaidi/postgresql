@@ -181,3 +181,78 @@ SELECT
 FROM
     customer;
 ```
+![res](images/PostgreSQL-Alias-column-alias-example.png)
+
+#### 3) Column aliases that contain spaces
+
+If a column alias contains one or more spaces, you need to surround it with double quotes like this:
+
+```postgresql
+column_name AS "column alias"
+```
+
+```postgresql
+SELECT
+    first_name || ' ' || last_name "full name"
+FROM
+    customer;
+```
+![](images/PostgreSQL-Column-Alias-with-space.png)
+
+## ORDER BY
+
+When you query data from a table, the `SELECT` statement returns rows in an unspecified order. To sort the rows of the result set, you use the `ORDER BY` clause in the `SELECT` statement.
+
+The `ORDER BY `clause allows you to sort rows returned by a `SELECT` clause in `ascending` or `descending` order based on a sort expression.
+
+The following illustrates the syntax of the ORDER BY clause:
+
+```postgresql
+SELECT
+	select_list
+FROM
+	table_name
+ORDER BY
+	sort_expression1 [ASC | DESC],
+        ...
+	sort_expressionN [ASC | DESC];
+```
+
+In this syntax:
+
+* First, specify a sort expression, which can be a column or an expression, that you want to sort after the `ORDER BY` keywords. If you want to sort the result set based on multiple columns or expressions, you need to place a comma (`,`) between two columns or expressions to separate them.
+* Second, you use the ASC option to sort rows in ascending order and the DESC option to sort rows in descending order. If you omit the ASC or DESC option, the ORDER BY uses ASC by default.
+
+PostgreSQL evaluates the clauses in the `SELECT` statment in the following order: `FROM`, `SELECT`, and `ORDER BY`:
+
+![](images/PostgreSQL-ORDER-BY.png)
+
+### PostgreSQL ORDER BY examples
+
+#### 1) Using PostgreSQL ORDER BY clause to sort rows by one column
+
+The following query uses the `ORDER BY` clause to sort customers by their first names in ascending order:
+
+```postgresql
+SELECT
+	first_name,
+	last_name
+FROM
+	customer
+ORDER BY
+	first_name ASC;
+```
+![](images/PostgreSQL-ORDER-BY-one-column-example.png)
+
+Since the `ASC` option is the default, you can omit it in the `ORDER BY` clause like this:
+
+```postgresql
+SELECT
+	first_name,
+	last_name
+FROM
+	customer
+ORDER BY
+	first_name;
+```
+
