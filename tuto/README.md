@@ -155,3 +155,29 @@ SELECT
    last_name surname
 FROM customer;
 ```
+
+#### 2) Assigning a column alias to an expression example
+
+The following query returns the full names of all customers. It constructs the full name by concatenating the first name, space, and the last name:
+
+```postgresql
+SELECT 
+   first_name || ' ' || last_name 
+FROM 
+   customer;
+```
+
+Note that in PostgreSQL, you use the `||` as the concatenating operator that concatenates one or more strings into a single string.
+
+![res](images/PostgreSQL-Alias-Example.png)
+
+As you can see clearly from the output, the heading of the column is not meaningful `?column?` .
+
+To fix this, you can assign the expression `first_name || ' ' || last_name` a column alias e.g., `full_name`:
+
+```postgresql
+SELECT
+    first_name || ' ' || last_name AS full_name
+FROM
+    customer;
+```
