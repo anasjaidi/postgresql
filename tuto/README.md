@@ -81,5 +81,13 @@ FROM
 
 ![results](images/PostgreSQL-Select-Select-multiple-columns.png)
 
+#### 3) Using PostgreSQL SELECT statement to query data from all columns of a table example
 
+The following query uses the `SELECT` statement to select data from all columns of the customer table:
+
+```postgresql
+SELECT * FROM customer;
+```
+
+![results](images/PostgreSQL-Select-Select-all-columns.png)
 
