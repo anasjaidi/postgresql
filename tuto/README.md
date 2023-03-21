@@ -581,3 +581,23 @@ WHERE
 ```
 
 ![](images/PostgreSQL-WHERE-with-IN-operator.png)
+
+#### 5) Using the WHERE clause with the LIKE operator example
+
+To find a string that matches a specified pattern, you use the `LIKE` operator. The following example returns all customers whose first names start with the string `Ann`:
+
+```postgresql
+SELECT
+	first_name,
+	last_name
+FROM
+	customer
+WHERE 
+	first_name LIKE 'Ann%'
+```
+
+![](images/PostgreSQL-WHERE-with-LIKE-operator.png)
+
+The `%` is called a wildcard that matches any string. The `'Ann%'` pattern matches any string that starts with `'Ann'`.
+
+
