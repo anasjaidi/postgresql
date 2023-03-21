@@ -529,3 +529,22 @@ WHERE
 	first_name = 'Jamie';
 ```
 
+![](images/PostgreSQL-WHERE-string-comparison.png)
+
+#### 2) Using WHERE clause with the AND operator example
+
+The following example finds customers whose first name and last name are `Jamie` and `rice` by using the `AND` logical operator to combine two Boolean expressions:
+
+```postgresql
+SELECT
+	last_name,
+	first_name
+FROM
+	customer
+WHERE
+	first_name = 'Jamie' AND 
+        last_name = 'Rice';
+```
+
+![](images/PostgreSQL-WHERE-with-AND-operator.png)
+
