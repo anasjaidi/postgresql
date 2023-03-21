@@ -91,3 +91,67 @@ SELECT * FROM customer;
 
 ![results](images/PostgreSQL-Select-Select-all-columns.png)
 
+In this example, we used an asterisk (*) in the SELECT clause, which is a shorthand for all columns. Instead of listing all columns in the SELECT clause, we just used the asterisk (*) to save some typing.
+
+
+## Column Alias
+
+A column alias allows you to assign a column or an expression in the select list of a SELECT statement a temporary name. The column alias exists temporarily during the execution of the query.
+
+The following illustrates the syntax of using a column alias:
+
+```postgresql
+SELECT column_name AS alias_name
+FROM table_name;
+```
+
+In this syntax, the `column_name` is assigned an alias `alias_name`. The `AS` keyword is optional so you can omit it like this:
+
+```postgresql
+SELECT column_name alias_name
+FROM table_name;
+```
+
+The following syntax illustrates how to set an alias for an expression in the SELECT clause:
+
+```postgresql
+SELECT expression AS alias_name
+FROM table_name;
+```
+
+The main purpose of column aliases is to make the headings of the output of a query more meaningful.
+
+### column alias examples
+
+#### 1) Assigning a column alias to a column example
+
+The following query returns the first names and last names of all customers from the customer table:
+
+```postgresql
+SELECT 
+   first_name, 
+   last_name
+FROM customer;
+```
+![Res](images/PostgreSQL-Column-Alias-example-1.png)
+
+If you want to rename the `last_name` heading, you can assign it a new name using a column alias like this:
+
+```postgresql
+SELECT 
+   first_name, 
+   last_name AS surname
+FROM customer;
+```
+
+This query assigned the `surname` as the alias of the `last_name` column:
+![res](images/PostgreSQL-Column-Alias-Surname-example-1.png)
+
+Or you can make it shorter by removing the `AS` keyword as follows:
+
+```postgresql
+SELECT 
+   first_name, 
+   last_name surname
+FROM customer;
+```
