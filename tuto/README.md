@@ -564,3 +564,20 @@ WHERE
 ```
 ![](images/PostgreSQL-WHERE-with-OR-operator.png)
 
+#### 4) Using WHERE clause with the IN operator example
+
+If you want to match a string with any `string` in a list, you can use the `IN` operator.
+
+For example, the following statement returns customers whose first name is `Ann`, or `Anne`, or `Annie`:
+
+```postgresql
+SELECT
+	first_name,
+	last_name
+FROM
+	customer
+WHERE 
+	first_name IN ('Ann','Anne','Annie');
+```
+
+![](images/PostgreSQL-WHERE-with-IN-operator.png)
