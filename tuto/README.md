@@ -256,3 +256,77 @@ ORDER BY
 	first_name;
 ```
 
+#### 2) Using PostgreSQL ORDER BY clause to sort rows by one column in descending order
+
+The following statement selects the first name and last name from the `customer` table and sorts the rows by values in the last name column in descending order:
+
+```postgresql
+SELECT
+       first_name,
+       last_name
+FROM
+       customer
+ORDER BY
+       last_name DESC;
+```
+
+![](images/PostgreSQL-ORDER-BY-one-column-desc-example.png)
+
+#### 3) Using PostgreSQL ORDER BY clause to sort rows by multiple columns
+
+
+The following statement selects the first name and last name from the customer table and sorts the rows by the first name in ascending order and last name in descending order:
+
+```postgresql
+SELECT
+	first_name,
+	last_name
+FROM
+	customer
+ORDER BY
+	first_name ASC,
+	last_name DESC;
+```
+
+![](images/PostgreSQL-ORDER-BY-multiple-columns.png)
+
+In this example, the `ORDER BY` clause sorts rows by values in the first name column first. And then it sorts the sorted rows by values in the last name column.
+
+As you can see clearly from the output, two customers with the same first name `Kelly` have the last name sorted in descending order.
+
+#### 4) Using PostgreSQL ORDER BY clause to sort rows by expressions
+
+
+The `LENGTH()` function accepts a string and returns the length of that string.
+
+The following statement selects the first names and their lengths. It sorts the rows by the lengths of the first names:
+
+```postgresql
+SELECT 
+	first_name,
+	LENGTH(first_name) len
+FROM
+	customer
+ORDER BY 
+	len DESC;
+```
+
+![](images/PostgreSQL-ORDER-BY-expressions.png)
+
+Because the `ORDER BY` clause is evaluated after the `SELECT` clause, the column alias len is available and can be used in the `ORDER BY` clause.
+
+
+#### PostgreSQL ORDER BY clause and NULL
+
+In the database world, `NULL` is a marker that indicates the missing data or the data is unknown at the time of recording.
+
+When you sort rows that contains `NULL`, you can specify the order of `NULL` with other non-null values by using the `NULLS FIRST` or `NULLS LAST` option of the ORDER BY clause:
+
+```postgresql
+ORDER BY sort_expresssion [ASC | DESC] [NULLS FIRST | NULLS LAST]
+```
+```postgresql
+SELECT num
+FROM sort_demo
+ORDER BY num NULLS LAST;
+```
