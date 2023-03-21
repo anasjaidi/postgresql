@@ -1,0 +1,1 @@
+SELECT DISTINCT bcolor from distinct_demo;
