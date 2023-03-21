@@ -58,3 +58,28 @@ This example uses the `SELECT` statement to find the first names of all customer
 ```postgresql
 SELECT first_name FROM customer;
 ```
+Here is the partial output:
+
+![Results](./images/PostgreSQL-Select-Select-a-single-column.png)
+
+**SEMICOLON**
+
+Notice that we added a semicolon (;) at the end of the SELECT statement. The semicolon is not a part of the SQL statement. It is used to signal PostgreSQL the end of an SQL statement. The semicolon is also used to separate two SQL statements.
+
+#### 2) Using PostgreSQL SELECT statement to query data from multiple columns example
+
+Suppose you just want to know the first name, last name and email of customers, you can specify these column names in the `SELECT` clause as shown in the following query:
+
+```postgresql
+SELECT
+   first_name,
+   last_name,
+   email
+FROM
+   customer;
+```
+
+![results](images/PostgreSQL-Select-Select-multiple-columns.png)
+
+
+
