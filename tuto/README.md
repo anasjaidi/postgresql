@@ -621,4 +621,27 @@ ORDER BY
 
 ![](images/PostgreSQL-WHERE-with-BETWEEN-operator.png)
 
+In this example, we used the `LENGTH()` function gets the number of characters of an input string.
+
+#### 7) Using the WHERE clause with the not equal operator (<>) example
+
+This example finds customers whose first names start with Bra and last names are not Motley:
+
+```postgresql
+SELECT 
+	first_name, 
+	last_name
+FROM 
+	customer 
+WHERE 
+	first_name LIKE 'Bra%' AND 
+	last_name <> 'Motley';
+```
+
+![](images/PostgreSQL-WHERE-with-Not-Equal-operator.png)
+
+Note that you can use the `!=` operator and `<>` operator interchangeably because they are equivalent.
+
+
+
 

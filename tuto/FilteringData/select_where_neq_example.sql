@@ -1,0 +1,1 @@
+select first_name from customer where first_name <> 'anas' AND first_name != 'robin';
