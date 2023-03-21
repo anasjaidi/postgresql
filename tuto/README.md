@@ -600,4 +600,25 @@ WHERE
 
 The `%` is called a wildcard that matches any string. The `'Ann%'` pattern matches any string that starts with `'Ann'`.
 
+#### 6) Using the WHERE clause with the BETWEEN operator example
+
+The following example finds customers whose first names start with the letter A and contains 3 to 5 characters by using the `BETWEEN` operator.
+
+The `BETWEEN` operator returns true if a value is in a range of values.
+
+```postgresql
+SELECT
+	first_name,
+	LENGTH(first_name) name_length
+FROM
+	customer
+WHERE 
+	first_name LIKE 'A%' AND
+	LENGTH(first_name) BETWEEN 3 AND 5
+ORDER BY
+	name_length;
+```
+
+![](images/PostgreSQL-WHERE-with-BETWEEN-operator.png)
+
 
