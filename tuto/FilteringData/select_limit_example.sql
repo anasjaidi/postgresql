@@ -1,0 +1,1 @@
+SELECT * FROM customer ORDER BY id LIMIT 2;
