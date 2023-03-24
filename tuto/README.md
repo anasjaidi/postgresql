@@ -1764,3 +1764,20 @@ The pattern `_her%` matches any string that:
 * And is `ended` with any number of characters.
 
 The returned first names are C**her**yl, S**her**ri, Sherry, and T**her**asa.
+
+
+###  NOT LIKE examples 
+
+The following query uses the `NOT LIKE` operator to find customers whose first names do not begin with `Jen`:
+
+```postgresql
+SELECT
+	first_name,
+	last_name
+FROM
+	customer
+WHERE
+	first_name NOT LIKE 'Jen%'
+ORDER BY 
+        first_name
+```
