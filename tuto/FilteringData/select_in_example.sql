@@ -1,0 +1,1 @@
+SELECT * FROM cutomer WHERE fist_name IN ('anas', 'robin');

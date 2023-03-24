@@ -17,6 +17,8 @@
       <change beforePath="$PROJECT_DIR$/../doc/src/main/resources/application.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../doc/src/main/resources/applicationContext.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../doc/src/test/java/com/spring/doc/DocApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +81,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;TODO_SCOPE&quot;: &quot;All Places&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/ajaidi/Documents/postgresql/tuto/FilteringData&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -96,8 +99,24 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.learn.tuto.model" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/FilteringData" />
+    </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="tuto" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="tuto" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TutoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="tuto" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.learn.tuto.TutoApplication" />
@@ -120,6 +139,8 @@
       <workItem from="1678699847106" duration="933000" />
       <workItem from="1679262372265" duration="1000" />
       <workItem from="1679356640322" duration="4000" />
+      <workItem from="1679388737959" duration="16503000" />
+      <workItem from="1679664103764" duration="1451000" />
     </task>
     <task id="LOCAL-00001" summary="get applicationContext">
       <created>1678697038833</created>
