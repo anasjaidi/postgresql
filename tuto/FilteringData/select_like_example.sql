@@ -1,0 +1,1 @@
+select first_name from student where first_name like 'a%';
