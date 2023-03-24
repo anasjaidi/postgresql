@@ -752,3 +752,64 @@ SELECT first_name FROM customers
             WHERE first_name 
                 IN ('anas', 'robin');
 ```
+
+## NOT IN operator
+
+You can combine the `IN` operator with the `NOT` operator to select rows whose values do not match the values in the list.
+
+For example, the following statement finds all rentals with the customer id is not 1 or 2.
+
+```postgresql
+SELECT
+	customer_id,
+	rental_id,
+	return_date
+FROM
+	rental
+WHERE
+	customer_id NOT IN (1, 2);
+```
+
+![](images/PostgreSQL-NOT-IN-Operator.png)
+
+
+## BETWEEN
+
+You use the `BETWEEN` operator to match a value against a range of values. The following illustrates the syntax of the `BETWEEN` operator:
+
+```postgresql
+value BETWEEN low AND high;
+```
+
+If the `value` is greater than or equal to the `low` value and less than or equal to the `high` value, the expression returns true, otherwise, it returns false.
+
+
+You can rewrite the `BETWEEN` operator by using the greater than or equal `( >=)` or less than or equal `( <=)` operators like this:
+
+```postgresql
+value >= low and value <= high
+```
+
+
+If you want to check if a value is out of a range, you combine the `NOT` operator with the `BETWEEN` operator as follows:
+
+```postgresql
+value NOT BETWEEN low AND high;
+```
+
+The following expression is equivalent to the expression that uses the `NOT` and `BETWEEN` operators:
+
+```postgresql
+value < low OR value > high
+```
+
+### BETWEEN operator examples
+
+```postgresql
+SELECT
+	id
+FROM
+	payment
+WHERE
+	id BETWEEN 8 AND 9;
+```
